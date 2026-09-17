@@ -1,0 +1,24 @@
+<div id="app-header">OKC Technical Assessment</div>
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a
+    mat-tab-link
+    routerLink="/lineups-summary"
+    routerLinkActive
+    [active]="currentTab === tab.FRONTEND"
+    (click)="currentTab = tab.FRONTEND"
+  >
+    Frontend
+  </a>
+  <a
+    mat-tab-link
+    routerLink="/lineups-summary-api"
+    routerLinkActive
+    [active]="currentTab === tab.BACKEND"
+    (click)="currentTab = tab.BACKEND"
+  >
+    Backend
+  </a>
+</nav>
+<mat-tab-nav-panel #tabPanel>
+  <router-outlet></router-outlet>
+</mat-tab-nav-panel>

@@ -1,0 +1,263 @@
+[
+  {
+    "offensive_possessions": 2,
+    "offensive_points": 4,
+    "offensive_shot_attempts": 6,
+    "offensive_fg2_made": 1,
+    "offensive_fg2_attempted": 5,
+    "offensive_fg3_made": 0,
+    "offensive_fg3_attempted": 0,
+    "offensive_fg_made": 1,
+    "offensive_fg_attempted": 5,
+    "offensive_ft_made": 2,
+    "offensive_ft_attempted": 2,
+    "offensive_rebounds_offense": 4,
+    "offensive_rebounds_defense": 0,
+    "offensive_rebound_opportunities": 4,
+    "offensive_assists": 0,
+    "offensive_steals": 0,
+    "offensive_turnovers": 0,
+    "offensive_blocks": 1,
+    "offensive_offensive_fouls": 0,
+    "offensive_defensive_fouls": 1,
+    "offensive_shooting_fouls": 1,
+    "offensive_shot_attempt_points": 4,
+    "offensive_ft_potential_points": 2,
+    "offensive_transition_take_fouls": 0,
+    "defensive_possessions": 2,
+    "defensive_points": 2,
+    "defensive_shot_attempts": 2,
+    "defensive_fg2_made": 1,
+    "defensive_fg2_attempted": 2,
+    "defensive_fg3_made": 0,
+    "defensive_fg3_attempted": 0,
+    "defensive_fg_made": 1,
+    "defensive_fg_attempted": 2,
+    "defensive_ft_made": 0,
+    "defensive_ft_attempted": 1,
+    "defensive_rebounds_offense": 1,
+    "defensive_rebounds_defense": 1,
+    "defensive_rebound_opportunities": 2,
+    "defensive_assists": 0,
+    "defensive_steals": 0,
+    "defensive_turnovers": 1,
+    "defensive_blocks": 1,
+    "defensive_offensive_fouls": 0,
+    "defensive_defensive_fouls": 1,
+    "defensive_shooting_fouls": 1,
+    "defensive_shot_attempt_points": 2,
+    "defensive_ft_potential_points": 1,
+    "defensive_transition_take_fouls": 0,
+    "total_possessions": 4,
+    "offensive_fg_pct": 0.2,
+    "offensive_fg2_pct": 0.2,
+    "offensive_fg3_pct": 0,
+    "defensive_fg_pct": 0.5,
+    "defensive_fg2_pct": 0.5,
+    "defensive_fg3_pct": 0,
+    "team_id": "36e29cdb-520a-58bb-9608-6bf9522decb6",
+    "player_ids": [
+      "0f66a50d-1cf6-5a7f-8ef5-82bc62f7467e",
+      "2b1c6e77-fa7e-520a-87ad-e61d6d4e2bc7",
+      "344fb843-9f4b-52f9-9e8e-7627a8ede32e",
+      "6d3c07c6-0f75-5e15-95aa-c6c33b339fc4",
+      "91b76665-f237-5d82-8d3b-7556c59297c0"
+    ],
+    "players": [
+      {
+        "player_id": "0f66a50d-1cf6-5a7f-8ef5-82bc62f7467e",
+        "name": "Falcon"
+      },
+      {
+        "player_id": "2b1c6e77-fa7e-520a-87ad-e61d6d4e2bc7",
+        "name": "Scarlet Witch"
+      },
+      {
+        "player_id": "344fb843-9f4b-52f9-9e8e-7627a8ede32e",
+        "name": "Wolverine"
+      },
+      {
+        "player_id": "6d3c07c6-0f75-5e15-95aa-c6c33b339fc4",
+        "name": "Black Widow"
+      },
+      {
+        "player_id": "91b76665-f237-5d82-8d3b-7556c59297c0",
+        "name": "Captain Marvel"
+      }
+    ]
+  },
+  {
+    "offensive_possessions": 2,
+    "offensive_points": 4,
+    "offensive_shot_attempts": 2,
+    "offensive_fg2_made": 2,
+    "offensive_fg2_attempted": 2,
+    "offensive_fg3_made": 0,
+    "offensive_fg3_attempted": 0,
+    "offensive_fg_made": 2,
+    "offensive_fg_attempted": 2,
+    "offensive_ft_made": 0,
+    "offensive_ft_attempted": 0,
+    "offensive_rebounds_offense": 0,
+    "offensive_rebounds_defense": 0,
+    "offensive_rebound_opportunities": 0,
+    "offensive_assists": 0,
+    "offensive_steals": 0,
+    "offensive_turnovers": 0,
+    "offensive_blocks": 0,
+    "offensive_offensive_fouls": 0,
+    "offensive_defensive_fouls": 0,
+    "offensive_shooting_fouls": 0,
+    "offensive_shot_attempt_points": 4,
+    "offensive_ft_potential_points": 0,
+    "offensive_transition_take_fouls": 0,
+    "defensive_possessions": 2,
+    "defensive_points": 2,
+    "defensive_shot_attempts": 3,
+    "defensive_fg2_made": 1,
+    "defensive_fg2_attempted": 2,
+    "defensive_fg3_made": 0,
+    "defensive_fg3_attempted": 1,
+    "defensive_fg_made": 1,
+    "defensive_fg_attempted": 3,
+    "defensive_ft_made": 0,
+    "defensive_ft_attempted": 0,
+    "defensive_rebounds_offense": 2,
+    "defensive_rebounds_defense": 0,
+    "defensive_rebound_opportunities": 2,
+    "defensive_assists": 0,
+    "defensive_steals": 0,
+    "defensive_turnovers": 1,
+    "defensive_blocks": 0,
+    "defensive_offensive_fouls": 0,
+    "defensive_defensive_fouls": 0,
+    "defensive_shooting_fouls": 0,
+    "defensive_shot_attempt_points": 2,
+    "defensive_ft_potential_points": 0,
+    "defensive_transition_take_fouls": 0,
+    "total_possessions": 4,
+    "offensive_fg_pct": 1,
+    "offensive_fg2_pct": 1,
+    "offensive_fg3_pct": 0,
+    "defensive_fg_pct": 0.3333333333333333,
+    "defensive_fg2_pct": 0.5,
+    "defensive_fg3_pct": 0,
+    "team_id": "11c7d162-14cb-5371-aeac-0c06dcdd6418",
+    "player_ids": [
+      "26969a8b-fe0b-56fd-be57-a153dd55d7fb",
+      "464f32de-97c3-5e85-bc68-547458ea7eb8",
+      "5754859c-9b40-527a-8f57-92c3de607a82",
+      "6256c59a-2cdc-553a-8673-7696c568d9ba",
+      "78bf2764-fb18-53ed-ac21-6cf7856acf86"
+    ],
+    "players": [
+      {
+        "player_id": "26969a8b-fe0b-56fd-be57-a153dd55d7fb",
+        "name": "Michael Jordan"
+      },
+      {
+        "player_id": "464f32de-97c3-5e85-bc68-547458ea7eb8",
+        "name": "Wile E. Coyote"
+      },
+      {
+        "player_id": "5754859c-9b40-527a-8f57-92c3de607a82",
+        "name": "Daffy Duck"
+      },
+      {
+        "player_id": "6256c59a-2cdc-553a-8673-7696c568d9ba",
+        "name": "LeBron James"
+      },
+      {
+        "player_id": "78bf2764-fb18-53ed-ac21-6cf7856acf86",
+        "name": "Elmer Fudd"
+      }
+    ]
+  },
+  {
+    "offensive_possessions": 2,
+    "offensive_points": 4,
+    "offensive_shot_attempts": 1,
+    "offensive_fg2_made": 1,
+    "offensive_fg2_attempted": 1,
+    "offensive_fg3_made": 0,
+    "offensive_fg3_attempted": 0,
+    "offensive_fg_made": 1,
+    "offensive_fg_attempted": 1,
+    "offensive_ft_made": 2,
+    "offensive_ft_attempted": 3,
+    "offensive_rebounds_offense": 1,
+    "offensive_rebounds_defense": 0,
+    "offensive_rebound_opportunities": 1,
+    "offensive_assists": 1,
+    "offensive_steals": 0,
+    "offensive_turnovers": 0,
+    "offensive_blocks": 0,
+    "offensive_offensive_fouls": 0,
+    "offensive_defensive_fouls": 2,
+    "offensive_shooting_fouls": 0,
+    "offensive_shot_attempt_points": 2,
+    "offensive_ft_potential_points": 3,
+    "offensive_transition_take_fouls": 0,
+    "defensive_possessions": 2,
+    "defensive_points": 3,
+    "defensive_shot_attempts": 2,
+    "defensive_fg2_made": 1,
+    "defensive_fg2_attempted": 1,
+    "defensive_fg3_made": 0,
+    "defensive_fg3_attempted": 0,
+    "defensive_fg_made": 1,
+    "defensive_fg_attempted": 1,
+    "defensive_ft_made": 1,
+    "defensive_ft_attempted": 2,
+    "defensive_rebounds_offense": 1,
+    "defensive_rebounds_defense": 0,
+    "defensive_rebound_opportunities": 1,
+    "defensive_assists": 0,
+    "defensive_steals": 1,
+    "defensive_turnovers": 1,
+    "defensive_blocks": 0,
+    "defensive_offensive_fouls": 0,
+    "defensive_defensive_fouls": 1,
+    "defensive_shooting_fouls": 1,
+    "defensive_shot_attempt_points": 3,
+    "defensive_ft_potential_points": 2,
+    "defensive_transition_take_fouls": 0,
+    "total_possessions": 4,
+    "offensive_fg_pct": 1,
+    "offensive_fg2_pct": 1,
+    "offensive_fg3_pct": 0,
+    "defensive_fg_pct": 1,
+    "defensive_fg2_pct": 1,
+    "defensive_fg3_pct": 0,
+    "team_id": "3c700625-848c-5afd-88c1-5cb60b0d5834",
+    "player_ids": [
+      "51fc8851-6d0f-54ff-a105-f4f77bcb9b15",
+      "7dac44c7-9491-5f5b-b5ad-4239361b1d10",
+      "8aba5596-c70f-5bdc-9527-402e5d1c0690",
+      "be769a4e-6457-5a40-b794-8e9d78095f85",
+      "df94e5e1-1585-566f-a75b-706c6366a1c2"
+    ],
+    "players": [
+      {
+        "player_id": "51fc8851-6d0f-54ff-a105-f4f77bcb9b15",
+        "name": "Phantom Stranger"
+      },
+      {
+        "player_id": "7dac44c7-9491-5f5b-b5ad-4239361b1d10",
+        "name": "Superman"
+      },
+      {
+        "player_id": "8aba5596-c70f-5bdc-9527-402e5d1c0690",
+        "name": "Green Lantern"
+      },
+      {
+        "player_id": "be769a4e-6457-5a40-b794-8e9d78095f85",
+        "name": "Black Canary"
+      },
+      {
+        "player_id": "df94e5e1-1585-566f-a75b-706c6366a1c2",
+        "name": "Batman"
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+<section class="api-inspector">
+  <h1>Lineups Summary Responses</h1>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Lineup size</mat-label>
+    <mat-select [(ngModel)]="leagueLineupSize" (selectionChange)="changeLeagueLineupSize()">
+      @for (lineupSize of lineupSizes; track lineupSize.value) {
+        <mat-option [value]="lineupSize.value">{{ lineupSize.label }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <div>API response for {{ leagueEndpoint }}</div>
+  <pre>{{ leagueApiResponse }}</pre>
+</section>
