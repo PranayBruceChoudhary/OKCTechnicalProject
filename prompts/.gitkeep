@@ -1,0 +1,13 @@
+Do I need to intsall version 3.12 if I already have python 3.13 on Windows ARM64, if not how would I set up a backend in my venv to take in data?  Version: Gemini Flash 3.7 
+
+I'm trying to follow the steps for the backend development and run a Django server on localhost 8000, yet when I go to the page, I get this on display:
+Page not found (404)
+Request Method:	GET
+Request URL:	http://localhost:8000/
+Using the URLconf defined in app.urls, Django tried these URL patterns, in this order:
+^api/v1/lineups$ [name='lineups_summary']
+The empty path didn’t match any of these.
+You’re seeing this error because you have DEBUG = True in your Django settings file. Change that to False, and Django will display a standard 404 page.
+I understand that there were warning that I was supposed to ignore when setting up this page so is this what I should expect or should there be something different? Version: Gemini Flash 3.7
+
+
