@@ -1,7 +1,7 @@
 # Submission Information
 
-Applicant Name:
+Applicant Name: Pranay Choudhary
 
-Applicant Email Address:
+Applicant Email Address: pranaybchoudhary@gmail.com
 
-Deployed Project URL:
+Deployed Project URL: https://frontend-production-6c6c.up.railway.app
