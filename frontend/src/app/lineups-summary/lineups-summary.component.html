@@ -1,1 +1,139 @@
-<div class="placeholder">Place your content here!</div>
+<div class="evaluation-container">
+  <header class="app-header">
+    <h1>Starting Lineup Engine</h1>
+    <p class="subtitle">Multi-criteria evaluation for NBA coaches and front office personnel</p>
+  </header>
+  <div class="workspace-grid">
+    <section class="panel panel-criteria">
+      <h2 class="panel-title">1. Criteria</h2>
+      <p class="panel-hint">Select the performance metrics to evaluate against:</p>
+      
+      <div class="checkbox-group">
+        <label class="custom-checkbox">
+          <input type="checkbox" [(ngModel)]="criteriaMask.rebounds">
+          <span class="checkmark"></span>
+          <span class="label-text">Rebound Stats (D-REB % / O-REB %)</span>
+        </label>
+
+        <label class="custom-checkbox">
+          <input type="checkbox" [(ngModel)]="criteriaMask.shooting">
+          <span class="checkmark"></span>
+          <span class="label-text">Shooting Efficiency (FG% / Scoring)</span>
+        </label>
+
+        <label class="custom-checkbox">
+          <input type="checkbox" [(ngModel)]="criteriaMask.assists">
+          <span class="checkmark"></span>
+          <span class="label-text">Playmaking & Assists</span>
+        </label>
+
+        <label class="custom-checkbox">
+          <input type="checkbox" [(ngModel)]="criteriaMask.defense">
+          <span class="checkmark"></span>
+          <span class="label-text">Defensive Rating (Points Allowed)</span>
+        </label>
+
+        <label class="custom-checkbox">
+          <input type="checkbox" [(ngModel)]="criteriaMask.netRating">
+          <span class="checkmark"></span>
+          <span class="label-text">Overall Net Rating (+/- Impact)</span>
+        </label>
+      </div>
+    </section>
+    <section class="panel panel-query">
+      <h2 class="panel-title">2. Query</h2>
+      <p class="panel-hint">Configure lineup grouping size:</p>
+
+      <div class="query-options">
+        <label class="radio-card" [class.selected]="selectedLineupSize === 5">
+          <input type="radio" [(ngModel)]="selectedLineupSize" [value]="5">
+          <span class="card-text">5-Man Full Units</span>
+        </label>
+
+        <label class="radio-card" [class.selected]="selectedLineupSize === 4">
+          <input type="radio" [(ngModel)]="selectedLineupSize" [value]="4">
+          <span class="card-text">4-Man Combinations</span>
+        </label>
+
+        <label class="radio-card" [class.selected]="selectedLineupSize === 3">
+          <input type="radio" [(ngModel)]="selectedLineupSize" [value]="3">
+          <span class="card-text">3-Man Trios</span>
+        </label>
+
+        <label class="radio-card" [class.selected]="selectedLineupSize === 2">
+          <input type="radio" [(ngModel)]="selectedLineupSize" [value]="2">
+          <span class="card-text">2-Man Duos</span>
+        </label>
+
+        <label class="radio-card" [class.selected]="selectedLineupSize === 1">
+          <input type="radio" [(ngModel)]="selectedLineupSize" [value]="1">
+          <span class="card-text">Individual Players (1-Man)</span>
+        </label>
+      </div>
+      <button class="btn-get-result" (click)="onGetResult()" [disabled]="isLoading">
+        <span *ngIf="!isLoading">Get Result ➔</span>
+        <span *ngIf="isLoading">Calculating...</span>
+      </button>
+    </section>
+    <section class="panel panel-results">
+      <h2 class="panel-title">3. Ranked Results</h2>
+      <p class="panel-hint">Top 3 choices matching criteria:</p>
+
+      <div *ngIf="isLoading" class="loading-state">
+        <div class="spinner"></div>
+        <p>Crunching league possessions...</p>
+      </div>
+
+      <div *ngIf="!isLoading && topRankedLineups.length > 0" class="results-podium">
+        <div 
+          *ngFor="let lineup of topRankedLineups; let i = index" 
+          class="result-card" 
+          [class.gold]="i === 0" 
+          [class.silver]="i === 1" 
+          [class.bronze]="i === 2">
+          
+          <div class="card-header">
+            <span class="rank-badge">#{{ i + 1 }} Choice</span>
+            <span class="skill-score">TrueSkill: {{ lineup.trueSkillScore }}/100</span>
+          </div>
+          <div class="player-chips">
+            <span *ngFor="let p of lineup.players" class="player-chip">
+              👤 {{ p.name }}
+            </span>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric">
+              <span class="metric-label">Net Rtg:</span>
+              <span class="metric-value" [class.positive]="lineup.net_rating > 0">
+                {{ lineup.net_rating > 0 ? '+' : '' }}{{ lineup.net_rating }}
+              </span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Possessions:</span>
+              <span class="metric-value">{{ lineup.total_possessions }}</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">D-Reb%:</span>
+              <span class="metric-value">{{ (lineup.defensive_reb_pct * 100).toFixed(0) }}%</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">FG%:</span>
+              <span class="metric-value">{{ (lineup.offensive_fg_pct * 100).toFixed(0) }}%</span>
+            </div>
+          </div>
+          <div class="strengths-box">
+            <div class="strengths-title">Tactical Strengths:</div>
+            <ul>
+              <li *ngFor="let str of lineup.strengthsSummary">{{ str }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="!isLoading && topRankedLineups.length === 0 && hasEvaluated" class="empty-state">
+        <p>No lineups found matching current criteria.</p>
+      </div>
+    </section>
+
+  </div>
+</div>
