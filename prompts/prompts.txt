@@ -25,3 +25,12 @@ Im thinking we combine points assists rebounds steals blocks into one offensive 
 Do you like the idea? can it be improved? is there a totally better new easy to get efficency?
 im given almost every stat you could want, points rebounds assists, steals, fouls, possessions, free throws etc
 Used: Gemini Flash 3.8
+
+
+For the frontend part of the project, Im thinking for the MVP there is a criteria and query section as seen in the handdrawn image provided. 
+The criteria will be what we are measuring our lineup against with checkboxes, have options like rebounds, assists, points, offensive rating, defensive rating, net ratings, rebound percentages etc. 
+For the query it will be about how big of a lineup do we want to find the best of, from 1-5 man lineup. 
+Once all the deisions have been made the user will click the get result button which will extract the data and calcualte the best teams based on the requested critea with interactvie details on why they are the best lineup and what their strengths are. 
+Make sure to give the ranked top 3 best choices. 
+What do you think, do you like the vision of where the frontend is going, is there a way to improve it so that its more user freindly for people like NBA coaches?
+Used: Gemini Flash 3.7

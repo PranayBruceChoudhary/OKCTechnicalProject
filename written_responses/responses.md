@@ -14,7 +14,7 @@ Alternative choice: However it is worth noting that the lineup of [Foghorn Legho
 
 2. Which player has the most positive on-court impact?
 
-The player that had the most positive on-court impact strictly addhering to statistics was Wasp.
+The player that had the most positive on-court impact strictly adhering to statistics was Wasp.
 Why: 
     1. She lead the league in net rating with 54.55 and a +4 point differential in 24 possessions.
     2. Had one of the highest 3 pt percentages with 33%     
