@@ -3,7 +3,6 @@ what are their roles and what do they do and how am i levarging them for the 3 d
 Version: Gemini Flash 3.7
 
 
-
 Do I need to install version 3.12 if I already have python 3.13 on Windows ARM64, if not how would I set up a backend in my venv to take in data?  
 Version: Gemini Flash 3.7 
 
@@ -33,4 +32,11 @@ For the query it will be about how big of a lineup do we want to find the best o
 Once all the deisions have been made the user will click the get result button which will extract the data and calcualte the best teams based on the requested critea with interactvie details on why they are the best lineup and what their strengths are. 
 Make sure to give the ranked top 3 best choices. 
 What do you think, do you like the vision of where the frontend is going, is there a way to improve it so that its more user freindly for people like NBA coaches?
-Used: Gemini Flash 3.7
+Used: Gemini Flash 3.8
+
+
+Is there a way we can make the background OKC thunder colors, 
+don't make it to harsh that its impossible to read but make it clear that we added thunder colors to our design.
+what would be the color schema I would need to use? what would be your recommended RGB values for the orange and blue? 
+will I get in copyright trouble if I use the logo on my frontend website?
+Used: Gemini Flash 3.8
