@@ -49,13 +49,13 @@ export interface CriteriaMask {
 })
 export class LineupsSummaryComponent implements OnInit {
   selectedLineupSize: number = 5;
-
+  selectedCardIndex: number = 0;
   criteriaMask: CriteriaMask = {
-    rebounds: true,
-    shooting: true,
+    rebounds: false,
+    shooting: false,
     assists: false,
-    defense: true,
-    netRating: true
+    defense: false,
+    netRating: false
   };
 
   rawLineups: LineupSummary[] = [];
@@ -71,6 +71,9 @@ export class LineupsSummaryComponent implements OnInit {
     this.fetchDataAndEvaluate();
   }
 
+  selectCard(index: number): void {
+    this.selectedCardIndex = index;
+  }
   fetchDataAndEvaluate(): void {
     this.isLoading = true;
     const url = `${this.backendUrl}?lineup_size=${this.selectedLineupSize}`;

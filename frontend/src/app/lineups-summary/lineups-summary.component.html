@@ -1,7 +1,9 @@
 <div class="evaluation-container">
+  <!-- Official OKC Header -->
   <header class="app-header">
-    <h1>Starting Lineup Engine</h1>
-    <p class="subtitle">Multi-criteria evaluation for NBA coaches and front office personnel</p>
+    <div class="header-text">
+      <h1><span class="brand-icon">⚡</span> Starting Lineup Intelligence Engine</h1>
+    </div>
   </header>
   <div class="workspace-grid">
     <section class="panel panel-criteria">
@@ -86,16 +88,23 @@
 
       <div *ngIf="!isLoading && topRankedLineups.length > 0" class="results-podium">
         <div 
-          *ngFor="let lineup of topRankedLineups; let i = index" 
-          class="result-card" 
-          [class.gold]="i === 0" 
-          [class.silver]="i === 1" 
-          [class.bronze]="i === 2">
-          
-          <div class="card-header">
-            <span class="rank-badge">#{{ i + 1 }} Choice</span>
+            *ngFor="let lineup of topRankedLineups; let i = index" 
+            class="result-card" 
+            [class.active]="selectedCardIndex === i"
+            (click)="selectCard(i)">
+        <div class="card-header">
+            <div class="rank-title-group">
+                <!-- Medal Indicator -->
+                <span class="medal-icon" [ngClass]="{'gold': i === 0, 'silver': i === 1, 'bronze': i === 2}">
+                {{ i === 0 ? '🥇' : (i === 1 ? '🥈' : '🥉') }}
+                </span>
+                <span class="rank-badge">#{{ i + 1 }} Choice</span>
+                <span class="rank-label" [ngClass]="{'gold-text': i === 0, 'silver-text': i === 1, 'bronze-text': i === 2}">
+                {{ i === 0 ? 'Gold' : (i === 1 ? 'Silver' : 'Bronze') }}
+                </span>
+            </div>
             <span class="skill-score">TrueSkill: {{ lineup.trueSkillScore }}/100</span>
-          </div>
+            </div>
           <div class="player-chips">
             <span *ngFor="let p of lineup.players" class="player-chip">
               👤 {{ p.name }}

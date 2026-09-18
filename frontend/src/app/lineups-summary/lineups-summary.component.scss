@@ -1,90 +1,142 @@
-$navy: #002D62;
-$blue: #007AC1;
-$sunset: #EF3B24;
-$yellow: #FDBB30;
-$gray-bg: #F4F6F9;
-$border: #DDE2E8;
+/* --- Official OKC Thunder Colorway --- */
+$okc-navy-bg: #091D3E;       /* Deep balanced navy (not pitch black) */
+$okc-navy-card: #112A54;     /* Elevated panel navy */
+$okc-navy-hover: #163668;
+$okc-blue: #007AC1;          /* OKC Vivid Royal Blue */
+$okc-orange: #EF3B24;        /* Sunset Orange */
+$okc-yellow: #FDBB30;        /* Thunder Gold */
+
+$text-white: #FFFFFF;
+$text-sub: #E2E8F0;
+$text-dim: #94A3B8;
+$border-panel: rgba(255, 255, 255, 0.12);
 
 .evaluation-container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 24px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #091D3E 0%, #06152D 100%);
+  padding: 28px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #1a202c;
+  color: $text-white;
 }
 
+/* Header Banner */
 .app-header {
-  margin-bottom: 24px;
-  h1 {
-    font-size: 28px;
-    font-weight: 800;
-    color: $navy;
-    margin: 0 0 6px 0;
+  background: linear-gradient(135deg, #007AC1 0%, #00548B 100%);
+  padding: 32px 36px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border-bottom: 4px solid $okc-orange;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .header-text {
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #FFFFFF !important;
+      margin: 0 0 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .brand-icon {
+        color: $okc-yellow;
+        font-size: 26px;
+      }
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #E2E8F0 !important;
+      margin: 0;
+      font-weight: 500;
+    }
   }
-  .subtitle {
-    font-size: 14px;
-    color: #64748b;
-    margin: 0;
+
+  .header-badge {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FFFFFF !important;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 }
 
+/* 3-Column Layout */
 .workspace-grid {
   display: grid;
-  grid-template-columns: 300px 260px 1fr;
-  gap: 20px;
+  grid-template-columns: 310px 270px 1fr;
+  gap: 22px;
   align-items: start;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1080px) {
     grid-template-columns: 1fr;
   }
 }
 
+/* Panels */
 .panel {
-  background: #ffffff;
-  border: 1px solid $border;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  background: $okc-navy-card;
+  border: 1px solid $border-panel;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 
   .panel-title {
     font-size: 18px;
-    font-weight: 700;
-    color: $navy;
+    font-weight: 800;
+    color: #FFFFFF;
     margin: 0 0 4px 0;
-    border-bottom: 2px solid $blue;
-    padding-bottom: 8px;
+    border-bottom: 2px solid $okc-blue;
+    padding-bottom: 10px;
   }
   .panel-hint {
     font-size: 12px;
-    color: #718096;
-    margin: 0 0 16px 0;
+    color: $text-dim;
+    margin: 8px 0 18px 0;
   }
 }
 
-/* 1. Criteria Styling */
+/* 1. Criteria Checkboxes */
 .checkbox-group {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 
   .custom-checkbox {
     display: flex;
     align-items: center;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
+    color: $text-sub;
     cursor: pointer;
     user-select: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid transparent;
+    transition: all 0.15s ease;
+
+    &:hover {
+      background: $okc-navy-hover;
+      border-color: rgba(0, 122, 193, 0.4);
+    }
 
     input {
-      margin-right: 10px;
+      margin-right: 12px;
       width: 18px;
       height: 18px;
-      accent-color: $blue;
+      accent-color: $okc-blue;
     }
   }
 }
 
-/* 2. Query Styling */
+/* 2. Query Radio Options */
 .query-options {
   display: flex;
   flex-direction: column;
@@ -94,43 +146,54 @@ $border: #DDE2E8;
   .radio-card {
     display: flex;
     align-items: center;
-    padding: 10px 14px;
-    border: 1px solid $border;
+    padding: 12px 14px;
+    border: 1px solid $border-panel;
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
+    font-weight: 500;
+    color: $text-sub;
+    background: rgba(255, 255, 255, 0.03);
     transition: all 0.15s ease;
 
     input {
-      margin-right: 10px;
-      accent-color: $blue;
+      margin-right: 12px;
+      accent-color: $okc-blue;
+    }
+
+    &:hover {
+      background: $okc-navy-hover;
     }
 
     &.selected {
-      border-color: $blue;
-      background: #EBF5FB;
-      font-weight: 600;
-      color: $navy;
+      border-color: $okc-blue;
+      background: rgba(0, 122, 193, 0.2);
+      color: #FFFFFF;
+      font-weight: 700;
     }
   }
 }
 
+/* Sunset Orange "Get Result" Button */
 .btn-get-result {
   width: 100%;
   padding: 14px;
-  background: $sunset;
-  color: #ffffff;
+  background: linear-gradient(135deg, $okc-orange 0%, #D6301A 100%);
+  color: #FFFFFF;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(239, 59, 36, 0.3);
-  transition: background 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 4px 14px rgba(239, 59, 36, 0.4);
+  transition: all 0.15s ease;
 
   &:hover:not(:disabled) {
-    background:  #d6301a;
-    transform: translateY(-1px);
+    background: linear-gradient(135deg, #FF4D36 0%, #B8220E 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(239, 59, 36, 0.55);
   }
   &:disabled {
     opacity: 0.6;
@@ -138,7 +201,7 @@ $border: #DDE2E8;
   }
 }
 
-/* 3. Results Section (Top 3 Cards) */
+/* 3. Results Podium Cards */
 .results-podium {
   display: flex;
   flex-direction: column;
@@ -146,43 +209,95 @@ $border: #DDE2E8;
 }
 
 .result-card {
-  background: #ffffff;
-  border: 1px solid $border;
-  border-radius: 8px;
-  padding: 16px;
-  border-left: 6px solid #a0aec0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  background: #0E2448;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 18px;
+  border-left: 6px solid transparent;    /* Hidden by default */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;                       /* Shows it is clickable */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
-  &.gold {
-    border-left-color: $yellow;
-    background: #FFFDF5;
-  }
-  &.silver {
-    border-left-color: #A0AEC0;
-  }
-  &.bronze {
-    border-left-color: #ED8936;
+  /* Hover state: slight glow before clicking */
+  &:hover {
+    background: #122B54;
+    border-left-color: rgba(0, 122, 193, 0.4);
+    transform: translateX(4px);
   }
 
-  .card-header {
+  /* Active / Selected state: Vivid OKC Thunder Blue bar appears */
+  &.active {
+    border-left-color: $okc-blue;         /* The blue bar appears when selected */
+    background: linear-gradient(90deg, rgba(0, 122, 193, 0.18) 0%, #0E2448 100%);
+    border-top-color: rgba(0, 122, 193, 0.3);
+    border-right-color: rgba(0, 122, 193, 0.3);
+    border-bottom-color: rgba(0, 122, 193, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 122, 193, 0.25);
+    transform: translateX(6px);
+  }
+
+.card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
 
-    .rank-badge {
-      font-size: 14px;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: $navy;
+    .rank-title-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .medal-icon {
+        font-size: 20px;
+        line-height: 1;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+      }
+
+      .rank-badge {
+        font-size: 15px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        letter-spacing: 0.3px;
+      }
+
+      .rank-label {
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 2px 8px;
+        border-radius: 4px;
+
+        &.gold-text {
+          color: #FDBB30;
+          background: rgba(253, 187, 48, 0.15);
+          border: 1px solid rgba(253, 187, 48, 0.35);
+        }
+
+        &.silver-text {
+          color: #E2E8F0;
+          background: rgba(226, 232, 240, 0.15);
+          border: 1px solid rgba(226, 232, 240, 0.35);
+        }
+
+        &.bronze-text {
+          color: #F97316;
+          background: rgba(249, 115, 22, 0.15);
+          border: 1px solid rgba(249, 115, 22, 0.35);
+        }
+      }
     }
+
     .skill-score {
-      font-size: 13px;
-      font-weight: 700;
-      background: #E2E8F0;
-      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      background: $okc-blue;
+      color: #FFFFFF;
+      padding: 5px 12px;
       border-radius: 20px;
-      color: $navy;
+      letter-spacing: 0.4px;
+      box-shadow: 0 2px 6px rgba(0, 122, 193, 0.3);
     }
   }
 
@@ -190,16 +305,16 @@ $border: #DDE2E8;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 
     .player-chip {
-      background: #EDF2F7;
-      border: 1px solid $border;
+      background: rgba(0, 122, 193, 0.25);
+      border: 1px solid rgba(0, 122, 193, 0.5);
       border-radius: 6px;
-      padding: 4px 8px;
+      padding: 5px 10px;
       font-size: 13px;
-      font-weight: 600;
-      color: #2D3748;
+      font-weight: 700;
+      color: #E2E8F0;
     }
   }
 
@@ -207,44 +322,52 @@ $border: #DDE2E8;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
-    background: #F7FAFC;
-    padding: 10px;
-    border-radius: 6px;
-    margin-bottom: 12px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 14px;
 
     .metric {
       display: flex;
       flex-direction: column;
-      font-size: 12px;
+      font-size: 11px;
 
       .metric-label {
-        color: #718096;
+        color: $text-dim;
+        font-weight: 700;
+        text-transform: uppercase;
       }
       .metric-value {
-        font-size: 14px;
-        font-weight: 700;
-        color: #2D3748;
+        font-size: 15px;
+        font-weight: 800;
+        color: #FFFFFF;
 
         &.positive {
-          color: #2F855A;
+          color: #4ADE80; /* High contrast vibrant green */
         }
       }
     }
   }
 
   .strengths-box {
-    font-size: 12px;
-    color: #4A5568;
+    font-size: 13px;
+    color: $text-sub;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 12px 14px;
 
     .strengths-title {
       font-weight: 700;
-      margin-bottom: 4px;
+      color: $okc-yellow;
+      margin-bottom: 6px;
     }
     ul {
       margin: 0;
-      padding-left: 18px;
+      padding-left: 20px;
       li {
-        margin-bottom: 2px;
+        margin-bottom: 4px;
+        line-height: 1.4;
       }
     }
   }
@@ -253,5 +376,5 @@ $border: #DDE2E8;
 .loading-state, .empty-state {
   text-align: center;
   padding: 40px;
-  color: #718096;
+  color: $text-dim;
 }
