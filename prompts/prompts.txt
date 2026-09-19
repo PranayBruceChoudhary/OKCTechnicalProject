@@ -40,3 +40,8 @@ don't make it to harsh that its impossible to read but make it clear that we add
 what would be the color schema I would need to use? what would be your recommended RGB values for the orange and blue? 
 will I get in copyright trouble if I use the logo on my frontend website?
 Used: Gemini Flash 3.8
+
+What would the HTML design look like if I wanted text and buttons on the same table,
+ is there anything new I need to add or any new packages I need to update?
+
+Used: Gemini Flash 3.8
