@@ -1,10 +1,9 @@
-/* --- Official OKC Thunder Colorway --- */
-$okc-navy-bg: #091D3E;       /* Deep balanced navy (not pitch black) */
-$okc-navy-card: #112A54;     /* Elevated panel navy */
+$okc-navy-bg: #091D3E;     
+$okc-navy-card: #112A54; 
 $okc-navy-hover: #163668;
-$okc-blue: #007AC1;          /* OKC Vivid Royal Blue */
-$okc-orange: #EF3B24;        /* Sunset Orange */
-$okc-yellow: #FDBB30;        /* Thunder Gold */
+$okc-blue: #007AC1;       
+$okc-orange: #EF3B24;        
+$okc-yellow: #FDBB30;    
 
 $text-white: #FFFFFF;
 $text-sub: #E2E8F0;
@@ -221,17 +220,17 @@ $border-panel: rgba(255, 255, 255, 0.12);
   /* Hover state: slight glow before clicking */
   &:hover {
     background: #122B54;
-    border-left-color: rgba(0, 122, 193, 0.4);
+    border-left-color: rgba(239, 59, 36, 0.4);
     transform: translateX(4px);
   }
 
   /* Active / Selected state: Vivid OKC Thunder Blue bar appears */
   &.active {
-    border-left-color: $okc-blue;         /* The blue bar appears when selected */
+    border-left-color: rgba(239, 59, 36);         /* The blue bar appears when selected */
     background: linear-gradient(90deg, rgba(0, 122, 193, 0.18) 0%, #0E2448 100%);
-    border-top-color: rgba(0, 122, 193, 0.3);
-    border-right-color: rgba(0, 122, 193, 0.3);
-    border-bottom-color: rgba(0, 122, 193, 0.3);
+    border-top-color: rgba(239, 59, 36);
+    border-right-color: rgba(239, 59, 36,);
+    border-bottom-color: rgba(239, 59, 36,);
     box-shadow: 0 6px 20px rgba(0, 122, 193, 0.25);
     transform: translateX(6px);
   }

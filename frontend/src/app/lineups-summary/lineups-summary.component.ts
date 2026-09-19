@@ -50,13 +50,13 @@ export interface CriteriaMask {
 export class LineupsSummaryComponent implements OnInit {
   selectedLineupSize: number = 5;
   selectedCardIndex: number = 0;
-  criteriaMask: CriteriaMask = {
-    rebounds: false,
-    shooting: false,
+criteriaMask: CriteriaMask = {
+    rebounds: true,
+    shooting: true,
     assists: false,
-    defense: false,
-    netRating: false
-  };
+    defense: true,
+    netRating: true,
+};
 
   rawLineups: LineupSummary[] = [];
   topRankedLineups: LineupSummary[] = [];
@@ -190,7 +190,7 @@ export class LineupsSummaryComponent implements OnInit {
     }
 
     if (totalWeight === 0) {
-      return { score: lineup.total_possessions, strengths: ['Ranked by Total Possessions'] };
+      return { score: lineup.total_possessions, strengths: ['Ranked by Total Possessions (Default Fallback)'] };
     }
 
     const finalScore = Math.round(accumulatedScore / totalWeight);
